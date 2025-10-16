@@ -156,3 +156,35 @@ Contains the `@SpringBootApplication` annotation which:
 - Enables component scanning
 - Enables auto-configuration
 - Marks it as a Spring Boot app
+```
+@SpringBootApplication
+public class DemoApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(DemoApplication.class, args);
+    }
+}
+```
+
+### 6. target/
+- Created after you build the project using Maven (mvn package).
+- Contains compiled .class files, JAR/WAR files, and other build artifacts.
+
+### 🧩 Typical Flow
+A request hits a `Controller` (@RestController).
+The Controller calls a `Service` for business logic.
+The Service interacts with a `Repository` to fetch or save data.
+The Repository talks to the `Database` via JPA, JDBC, or Mongo.
+Data flows back to the Controller → Response to the client.
+
+
+
+
+
+
+
+
+
+
+
+
+
