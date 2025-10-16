@@ -85,6 +85,74 @@ my-project/
 - ✅ Reduces manual setup and errors
 
 ---
+## 2. Spring Boot Project Structure
+When you create a Spring Boot project (using Spring Initializr or manually with Maven/Gradle), it follows a standard directory structure defined by Maven conventions.
+```
+my-springboot-project/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/example/demo/
+│   │   │       ├── DemoApplication.java
+│   │   │       ├── controller/
+│   │   │       ├── service/
+│   │   │       └── repository/
+│   │   └── resources/
+│   │       ├── application.properties
+│   │       ├── static/
+│   │       ├── templates/
+│   │       └── banner.txt
+│   └── test/
+│       └── java/
+│           └── com/example/demo/
+│               └── DemoApplicationTests.java
+├── pom.xml
+└── README.md
+```
+### 📘 Folder and File Explanation
+### 1. src/main/java/
+- Contains all Java source code for your application.
+- Organized by package structure, usually starting with your base package (e.g., com.example.demo).
 
+**Common Sub-packages:**
+| Folder              | Purpose                                                                   |
+| ------------------- | ------------------------------------------------------------------------- |
+| `controller`        | Contains REST controllers (`@RestController`) that handle HTTP requests.  |
+| `service`           | Business logic layer (`@Service`).                                        |
+| `repository`        | Data access layer (`@Repository`), usually interfaces for JPA or MongoDB. |
+| `model` or `entity` | Classes that represent database tables or data models.                    |
+| `config`            | Configuration files or custom beans (`@Configuration`).                   |
 
+### 2. src/main/resources/
+Contains **non-code resources** like:
+| File/Folder                                   | Purpose                                                          |
+| --------------------------------------------- | ---------------------------------------------------------------- |
+| `application.properties` or `application.yml` | Main configuration file (DB, ports, profiles, etc.)              |
+| `static/`                                     | Stores static files like CSS, JS, images (served automatically). |
+| `templates/`                                  | For HTML templates (used with Thymeleaf or Freemarker).          |
 
+### 3. src/test/java/
+- Contains unit tests and integration tests.
+- By default, includes a test file named DemoApplicationTests.java.
+- Uses frameworks like JUnit and Mockito for testing.
+
+### 4. pom.xml
+The `pom.xml` is the **Maven configuration file**.
+It defines:
+- **Project dependencies** (like Spring Boot, JPA, etc.)  
+- **Plugins** (like `spring-boot-maven-plugin`)  
+- **Build information and project metadata**
+
+```
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-web</artifactId>
+</dependency>
+```
+
+### 5. DemoApplication.java
+The **main entry point** of the Spring Boot app.
+Contains the `@SpringBootApplication` annotation which:
+- Enables component scanning
+- Enables auto-configuration
+- Marks it as a Spring Boot app
