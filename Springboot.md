@@ -1,9 +1,9 @@
 ## 1. What is Maven ?
+### 🔹 1. Definition
 - **Maven** is a **build automation and project management tool** for **Java-based projects**.  
 - It helps in **building, testing, packaging, and deploying** applications.  
 - It also manages **project dependencies** automatically.
   
-## 
 
 ### 🔹 2. Main Features
 1. **Build Automation** – Compiles code, runs tests, and packages applications automatically.  
