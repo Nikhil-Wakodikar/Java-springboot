@@ -122,6 +122,10 @@ my-project/
 - ✅ Easy to use in CI/CD pipelines
 - ✅ Reduces manual setup and errors
 
+## What is Maven Wrapper (mvnw)
+The Maven Wrapper allows you to run Maven commands **without installing Maven globally**.
+It ensures that everyone uses the **same Maven version** for your project.
+
 ---
 ## 3. Spring Boot Project Structure
 When you create a Spring Boot project (using Spring Initializr or manually with Maven/Gradle), it follows a standard directory structure defined by Maven conventions.
