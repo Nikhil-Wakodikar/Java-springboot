@@ -3,6 +3,8 @@
 - It helps in **building, testing, packaging, and deploying** applications.  
 - It also manages **project dependencies** automatically.
 ___
+***
+
 ### 🔹 2. Main Features
 1. **Build Automation** – Compiles code, runs tests, and packages applications automatically.  
 2. **Dependency Management** – Automatically downloads and manages required libraries (JARs).  
