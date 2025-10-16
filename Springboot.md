@@ -4,6 +4,7 @@
 - It also manages **project dependencies** automatically.
 ___
 ***
+---
 
 ### 🔹 2. Main Features
 1. **Build Automation** – Compiles code, runs tests, and packages applications automatically.  
