@@ -246,9 +246,11 @@ public class DemoApplication {
     <licenses>
         <license/>                          <!-- License info (optional) -->
     </licenses>
+    
     <developers>
         <developer/>                        <!-- Developers info (optional) -->
     </developers>
+    
     <scm>
         <connection/>                        <!-- Source control connection info -->
         <developerConnection/>
