@@ -111,8 +111,8 @@ my-springboot-project/
 ```
 ### 📘 Folder and File Explanation
 ### 1. src/main/java/
-- Contains all Java source code for your application.
-- Organized by package structure, usually starting with your base package (e.g., com.example.demo).
+- Contains **all Java source code** for your application.
+- Organized by **package structure**, usually starting with your base package (e.g., `com.example.demo`).
 
 **Common Sub-packages:**
 | Folder              | Purpose                                                                   |
@@ -140,7 +140,7 @@ Contains **non-code resources** like:
 The `pom.xml` is the **Maven configuration file**.
 It defines:
 - **Project dependencies** (like Spring Boot, JPA, etc.)  
-- **Plugins** (like `spring-boot-maven-plugin`)  
+- **Plugins** (like `  spring-boot-maven-plugin`)  
 - **Build information and project metadata**
 
 ```
@@ -166,8 +166,8 @@ public class DemoApplication {
 ```
 
 ### 6. target/
-- Created after you build the project using Maven (mvn package).
-- Contains compiled .class files, JAR/WAR files, and other build artifacts.
+- Created after you build the project using Maven (`mvn package`).
+- Contains compiled `.class` files, JAR/WAR files, and other build artifacts.
 
 ### 🧩 Typical Flow
 - A request hits a `Controller` (@RestController).
