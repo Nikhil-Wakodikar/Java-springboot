@@ -3,8 +3,6 @@
 - It helps in **building, testing, packaging, and deploying** applications.  
 - It also manages **project dependencies** automatically.
 
---
-
 ### 🔹 2. Main Features
 1. **Build Automation** – Compiles code, runs tests, and packages applications automatically.  
 2. **Dependency Management** – Automatically downloads and manages required libraries (JARs).  
@@ -12,7 +10,7 @@
 4. **Plugin Support** – Uses plugins to add extra build features (e.g., compile, deploy, test).  
 5. **Integration** – Works well with IDEs (IntelliJ, Eclipse, VS Code) and CI/CD tools.
 
----
+<br>
 
 ### 🔹 3. Key File — `pom.xml` (Project Object Model)
 - The heart of every Maven project.  
