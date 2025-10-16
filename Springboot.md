@@ -224,7 +224,7 @@ public class DemoApplication {
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
                              https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-    **<!-- POM model version -->**
+    **<!-- <b>POM model version</b> -->**
     <modelVersion>4.0.0</modelVersion>
 
 
