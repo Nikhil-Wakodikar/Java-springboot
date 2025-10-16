@@ -223,9 +223,11 @@ public class DemoApplication {
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
                              https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
+    
     <!-- POM model version -->
     <modelVersion>4.0.0</modelVersion>
 
+    
     <!-- Parent POM: Inherits Spring Boot defaults, plugin configs, and dependency management -->
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -234,6 +236,7 @@ public class DemoApplication {
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
+    
     <!-- Project coordinates -->
     <groupId>com.example</groupId>          <!-- Organization/package -->
     <artifactId>myFirstProject</artifactId> <!-- Project/module name -->
@@ -242,6 +245,7 @@ public class DemoApplication {
     <description>First project for Spring Boot</description> <!-- Short description -->
     <url/>                                  <!-- Project website (optional) -->
 
+    
     <!-- Optional metadata -->
     <licenses>
         <license/>                          <!-- License info (optional) -->
@@ -258,11 +262,13 @@ public class DemoApplication {
         <url/>
     </scm>
 
+    
     <!-- Project-level properties -->
     <properties>
         <java.version>8</java.version>      <!-- Java version used for compilation -->
     </properties>
 
+    
     <!-- Project dependencies -->
     <dependencies>
         <!-- Spring Boot Web Starter: for building REST APIs and web apps -->
@@ -279,6 +285,7 @@ public class DemoApplication {
         </dependency>
     </dependencies>
 
+    
     <!-- Build configuration -->
     <build>
         <plugins>
@@ -289,7 +296,6 @@ public class DemoApplication {
             </plugin>
         </plugins>
     </build>
-
 </project>
 
 
