@@ -1,4 +1,42 @@
-## 1. What is Maven ?
+## 1 🌱 Spring vs Spring Boot
+
+### 🔹 1. What is Spring?
+- **Spring** is a **Java-based framework** for building **enterprise-level applications**.  
+- Provides features like:
+  - **Inversion of Control (IoC) / Dependency Injection**
+  - **Aspect-Oriented Programming (AOP)**
+  - **Transaction management**
+  - **MVC framework for web applications**
+- Helps in building modular, maintainable, and testable applications.  
+- Requires **manual configuration** (XML or Java-based) for most things.
+
+### 🔹 2. What is Spring Boot?
+- **Spring Boot** is a **framework built on top of Spring** to simplify Spring application development.  
+- Focuses on **auto-configuration** and **convention over configuration**.  
+- Key features:
+  - **Embedded server** (Tomcat, Jetty, etc.) — no need to deploy WAR files.  
+  - **Starter dependencies** — one dependency brings everything needed for a feature.  
+  - **Minimal configuration** — reduces boilerplate code.  
+  - **Production-ready features** — metrics, health checks, logging.
+
+### 🔹 3. Difference Between Spring and Spring Boot
+
+| Feature | Spring | Spring Boot |
+|---------|--------|------------|
+| **Configuration** | Manual configuration needed (XML/Java) | Auto-configuration by default |
+| **Setup** | Requires lots of setup and boilerplate code | Quick setup with Spring Initializr |
+| **Server** | Needs external server (WAR deployment) | Embedded server included (runs as JAR) |
+| **Dependencies** | Add dependencies manually | Starter POMs simplify dependency management |
+| **Complexity** | More flexible, but complex for beginners | Less flexible, but simpler and faster for development |
+| **Use Case** | Enterprise applications needing custom setup | Microservices, REST APIs, or quick Spring apps |
+
+### 🔹 4. Summary
+- **Spring** = Powerful, flexible Java framework (requires manual setup).  
+- **Spring Boot** = Opinionated framework to **simplify Spring development**, reduce configuration, and make projects production-ready quickly.
+
+---
+
+## 2. What is Maven ?
 ### 🔹 1. Definition
 - **Maven** is a **build automation and project management tool** for **Java-based projects**.  
 - It helps in **building, testing, packaging, and deploying** applications.  
@@ -85,7 +123,7 @@ my-project/
 - ✅ Reduces manual setup and errors
 
 ---
-## 2. Spring Boot Project Structure
+## 3. Spring Boot Project Structure
 When you create a Spring Boot project (using Spring Initializr or manually with Maven/Gradle), it follows a standard directory structure defined by Maven conventions.
 ```
 my-springboot-project/
