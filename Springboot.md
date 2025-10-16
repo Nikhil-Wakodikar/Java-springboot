@@ -10,7 +10,6 @@
 4. **Plugin Support** – Uses plugins to add extra build features (e.g., compile, deploy, test).  
 5. **Integration** – Works well with IDEs (IntelliJ, Eclipse, VS Code) and CI/CD tools.
 
-<br>
 
 ### 🔹 3. Key File — `pom.xml` (Project Object Model)
 - The heart of every Maven project.  
