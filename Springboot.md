@@ -217,60 +217,66 @@ public class DemoApplication {
 ---
 
 ## 4. Structure of pom.xml
-```
+
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" 
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
                              https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-    <!-- POM model version -->
+    **<!-- POM model version -->**
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- Parent POM: Inherits Spring Boot defaults, plugin configs, and dependency management -->
+
+    **<!-- Parent POM: Inherits Spring Boot defaults, plugin configs, and dependency management -->**
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.7.18</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+    
 
-    <!-- Project coordinates -->
-    <groupId>com.example</groupId>          <!-- Organization/package -->
-    <artifactId>myFirstProject</artifactId> <!-- Project/module name -->
-    <version>0.0.1-SNAPSHOT</version>       <!-- Version (SNAPSHOT = in development) -->
-    <name>myFirstProject</name>             <!-- Display name -->
-    <description>First project for Spring Boot</description> <!-- Short description -->
+    **<!-- Project coordinates -->**
+    <groupId>com.example</groupId>              **<!-- Organization/package -->**
+    <artifactId>myFirstProject</artifactId>     **<!-- Project/module name -->**
+    <version>0.0.1-SNAPSHOT</version>           **<!-- Version (SNAPSHOT = in development) -->**
+    <name>myFirstProject</name>                 **<!-- Display name -->**
+    <description>First project for Spring Boot</description>     **<!-- Short description -->**
     <url/>                                  <!-- Project website (optional) -->
+
 
     <!-- Optional metadata -->
     <licenses>
         <license/>                          <!-- License info (optional) -->
     </licenses>
+    
     <developers>
         <developer/>                        <!-- Developers info (optional) -->
     </developers>
+    
     <scm>
         <connection/>                        <!-- Source control connection info -->
         <developerConnection/>
         <tag/>
         <url/>
     </scm>
+    
 
-    <!-- Project-level properties -->
+    **<!-- Project-level properties -->**
     <properties>
-        <java.version>8</java.version>      <!-- Java version used for compilation -->
+        <java.version>8</java.version>        **<!-- Java version used for compilation -->**
     </properties>
 
-    <!-- Project dependencies -->
+    **<!-- Project dependencies -->**
     <dependencies>
-        <!-- Spring Boot Web Starter: for building REST APIs and web apps -->
+        **<!-- Spring Boot Web Starter: for building REST APIs and web apps -->**
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!-- Spring Boot Test Starter: for unit/integration testing -->
+        **<!-- Spring Boot Test Starter: for unit/integration testing -->**
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -291,8 +297,6 @@ public class DemoApplication {
 
 </project>
 
-
-```
 
 
 
