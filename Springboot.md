@@ -217,7 +217,14 @@ public class DemoApplication {
 ---
 
 ## 4. Structure of pom.xml
-<pre>
+# MyFirstProject POM File
+
+**Explanation of key sections:**
+- **Parent POM:** Inherits Spring Boot defaults and plugin configurations.  
+- **Java version:** 8  
+- **Dependencies:** Web and Test starter for building and testing the application.  
+- **Build:** Spring Boot Maven plugin for running and packaging the app.  
+
     <?xml version="1.0" encoding="UTF-8"?>
     <project xmlns="http://maven.apache.org/POM/4.0.0"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -242,18 +249,34 @@ public class DemoApplication {
         <name>myFirstProject</name>
         <description>First project for Spring Boot</description>
 
+        <!-- Optional metadata -->
+        <licenses>
+            <license/> <!-- License info (optional) -->
+        </licenses>
+        <developers>
+            <developer/> <!-- Developer info (optional) -->
+        </developers>
+        <scm>
+            <connection/> <!-- Source control info -->
+            <developerConnection/>
+            <tag/>
+            <url/>
+        </scm>
+
         <!-- Project-level properties -->
         <properties>
             <java.version>8</java.version>
         </properties>
 
-        <!-- Dependencies -->
+        <!-- Project dependencies -->
         <dependencies>
+            <!-- Spring Boot Web Starter: for building REST APIs and web apps -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
             </dependency>
 
+            <!-- Spring Boot Test Starter: for unit/integration testing -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-test</artifactId>
@@ -261,9 +284,10 @@ public class DemoApplication {
             </dependency>
         </dependencies>
 
-        <!-- Build -->
+        <!-- Build configuration -->
         <build>
             <plugins>
+                <!-- Spring Boot Maven Plugin: allows running and packaging Spring Boot apps -->
                 <plugin>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
@@ -272,7 +296,6 @@ public class DemoApplication {
         </build>
 
     </project>
-</pre>
 
 
 
