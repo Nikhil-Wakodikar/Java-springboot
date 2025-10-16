@@ -170,11 +170,11 @@ public class DemoApplication {
 - Contains compiled .class files, JAR/WAR files, and other build artifacts.
 
 ### 🧩 Typical Flow
-A request hits a `Controller` (@RestController).
-The Controller calls a `Service` for business logic.
-The Service interacts with a `Repository` to fetch or save data.
-The Repository talks to the `Database` via JPA, JDBC, or Mongo.
-Data flows back to the Controller → Response to the client.
+- A request hits a `Controller` (@RestController).
+- The Controller calls a `Service` for business logic.
+- The Service interacts with a `Repository` to fetch or save data.
+- The Repository talks to the `Database` via JPA, JDBC, or Mongo.
+- Data flows back to the Controller → Response to the client.
 
 
 
