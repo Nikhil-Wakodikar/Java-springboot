@@ -304,7 +304,14 @@ public class DemoApplication {
 
 ---
 
-## 5.🌱 @SpringBootApplication
+## 🧩 IoC (Inversion of Control)
+**Definition**
+- **IoC (Inversion of Control)** is a **design principle** where the control of object creation, configuration, and lifecycle is **transferred from the developer to the Spring container.**
+- In simple terms:
+  - You don’t create objects manually using new; the framework does it for you.
+---
+
+## 6.🌱 @SpringBootApplication
 
 - Definition:
 It is a **convenience annotation** that combines three commonly used Spring annotations:
