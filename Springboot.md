@@ -309,6 +309,35 @@ public class DemoApplication {
 - **IoC (Inversion of Control)** is a **design principle** where the control of object creation, configuration, and lifecycle is **transferred from the developer to the Spring container.**
 - In simple terms:
   - You don’t create objects manually using new; the framework does it for you.
+
+**🎯 Main Objective**
+- To reduce tight coupling between components.
+- To increase flexibility, testability, and maintainability.
+- To centralize object management inside a container.
+
+**⚙️ How IoC Works**
+
+- Define Beans
+  - Using annotations (@Component, @Service, @Repository, @Bean)
+  - Or XML configuration.
+- Spring Container (IoC container) reads those definitions.
+- The container creates, initializes, and injects dependencies automatically.
+- You access objects using the ApplicationContext.
+
+**🧭 In Short**
+- 🧠 IoC = Concept
+- ⚙️ Implemented via ApplicationContext
+- 💉 Achieved through Dependency Injection (DI)
+
+- List of annotations for classes managed by the Spring IoC container
+@Controller
+@RestController
+@Service
+@Repository
+@Component
+@Configuration
+@Bean
+
 ---
 
 ## 6.🌱 @SpringBootApplication
