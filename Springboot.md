@@ -306,11 +306,37 @@ public class DemoApplication {
 
 ## 5.🌱 @SpringBootApplication
 
+- Definition:
+It is a **convenience annotation** that combines three commonly used Spring annotations:
+```
+@SpringBootConfiguration
+@EnableAutoConfiguration
+@ComponentScan
+```
+So, using @SpringBootApplication saves you from declaring all three separately.
 
+**Main Purpose**
+- Marks the main class of a Spring Boot application.
+- Helps Spring Boot auto-configure the application based on dependencies.
+- Enables component scanning to detect beans, controllers, and configurations automatically.
 
+### Internally Includes
+**@SpringBootConfiguration**
+- It’s a specialized version of @Configuration.
+- Allows you to define beans using @Bean methods.
+  
+**@EnableAutoConfiguration**
+- Tells Spring Boot to automatically configure the application
+- based on dependencies in the classpath.
+Example: If spring-boot-starter-web is present, it configures Tomcat, MVC, etc.
 
-
-
+**@ComponentScan**
+- Scans the package (and its subpackages) of the class where it is declared.
+- Automatically detects components annotated with:
+`@Component`
+`@Service`
+`@Repository`
+`@Controller`
 
 
 
