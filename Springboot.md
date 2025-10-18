@@ -36,7 +36,7 @@
 
 ---
 
-## 2. What is Maven ?
+## 2. 🌱What is Maven ?
 ### 🔹 1. Definition
 - **Maven** is a **build automation and project management tool** for **Java-based projects**.  
 - It helps in **building, testing, packaging, and deploying** applications.  
@@ -122,12 +122,12 @@ my-project/
 - ✅ Easy to use in CI/CD pipelines
 - ✅ Reduces manual setup and errors
 
-## What is Maven Wrapper (mvnw)
+## 🌱 What is Maven Wrapper (mvnw)
 The Maven Wrapper allows you to run Maven commands **without installing Maven globally**.
 It ensures that everyone uses the **same Maven version** for your project.
 
 ---
-## 3. Spring Boot Project Structure
+## 3. 🌱Spring Boot Project Structure
 When you create a Spring Boot project (using Spring Initializr or manually with Maven/Gradle), it follows a standard directory structure defined by Maven conventions.
 ```
 my-springboot-project/
@@ -302,7 +302,9 @@ public class DemoApplication {
     </build>
 </project>
 
+---
 
+## 5.🌱 @SpringBootApplication
 
 
 
