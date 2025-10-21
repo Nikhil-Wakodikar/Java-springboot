@@ -399,14 +399,14 @@ Example: If spring-boot-starter-web is present, it configures Tomcat, MVC, etc.
 @Transactional(rollbackFor = MyCustomException.class)
 ```
 
-**⚙️ What Happens Internally**
-1. Transaction starts ✅
-2. User is saved
-3. Profile is saved
-4. Exception occurs ❌
-5. Spring rolls back both operations automatically 🧹
+**⚡ What Happens Internally**
+When you annotate a method with @Transactional:
 
-
+1. Spring creates a **proxy** for that method.
+2. Before executing, it **starts a transaction**.
+3. Executes your database code.
+4. If everything passes → **commit**.
+5. If any RuntimeException occurs → **rollback**.
 
 
 
