@@ -374,6 +374,48 @@ Example: If spring-boot-starter-web is present, it configures Tomcat, MVC, etc.
 `@Repository`
 `@Controller`
 
+---
+
+##  🧩 7.@Transactional
+
+**What is @Transactional**
+- `@Transactional` is used in Spring Boot to manage **database transactions** automatically.
+- Ensures a set of operations execute as one unit —
+  -either **all succeed** or **all rollback** (atomicity).
+
+**⚙️ Default Rollback Behavior**
+| Exception Type  | Example                                                                | Rollback by Default? |
+| --------------- | ---------------------------------------------------------------------- | -------------------- |
+| ✅ **Unchecked** | `RuntimeException`, `NullPointerException`, `IllegalArgumentException` | ✔️ Yes               |
+| ❌ **Checked**   | `Exception`, `IOException`, `SQLException`                             | ❌ No                 |
+
+**🧠 Why rollbackFor is Needed**
+- By default, Spring only rolls back for unchecked exceptions.
+- If a method throws a checked or custom exception,
+  Spring commits the transaction unless told otherwise.
+
+✅ To fix this, specify:
+```
+@Transactional(rollbackFor = MyCustomException.class)
+```
+
+**⚙️ What Happens Internally**
+1. Transaction starts ✅
+2. User is saved
+3. Profile is saved
+4. Exception occurs ❌
+5. Spring rolls back both operations automatically 🧹
+
+
+
+
+
+
+
+
+
+
+
 
 
 
