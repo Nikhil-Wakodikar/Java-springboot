@@ -402,7 +402,6 @@ Example: If spring-boot-starter-web is present, it configures Tomcat, MVC, etc.
 **⚡ What Happens Internally**
 
 When you annotate a method with @Transactional:
-
 1. Spring creates a **proxy** for that method.
 2. Before executing, it **starts a transaction**.
 3. Executes your database code.
