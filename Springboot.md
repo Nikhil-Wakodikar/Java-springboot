@@ -408,15 +408,62 @@ When you annotate a method with @Transactional:
 4. If everything passes → **commit**.
 5. If any RuntimeException occurs → **rollback**.
 
+---
 
+## 8. what is @EnabledWebSecurity ?
 
+`@EnableWebSecurity` is an **annotation in Spring Security** that enables the **web security configuration** for your Spring Boot application.
 
+**🧩 Basic Explanation**
+When you add @EnableWebSecurity to a class, it:
+- Activates Spring Security’s web security support
+- Allows you to customize how security (authentication, authorization, etc.) should behave for your web application
 
+Essentially, it tells Spring Boot:
+- "Hey, use my custom security configuration instead of the default one."
 
+```
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 
+@EnableWebSecurity
+public class SecurityConfig {
 
+    @Bean
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        http
+            .authorizeHttpRequests(auth -> auth
+                .requestMatchers("/admin/**").hasRole("ADMIN")
+                .requestMatchers("/user/**").hasAnyRole("USER", "ADMIN")
+                .anyRequest().authenticated()
+            )
+            .formLogin()
+            .and()
+            .httpBasic();
+        return http.build();
+    }
+}
 
+```
+In this example:
+- The annotation `@EnableWebSecurity` activates web security.
+- You define a `SecurityFilterChain` bean to customize which routes are protected and how users log in.
 
+**⚙️ What Happens Internally**
+When `@EnableWebSecurity` is used:
+1. It imports WebSecurityConfiguration class.
+2. Registers a **Spring Security filter chain** (FilterChainProxy).
+3. Automatically applies security filters to HTTP requests (authentication, CSRF, CORS, etc.).
+
+**🚀 When to Use**
+- ✅ You need to override the default Spring Boot security behavior (for example, allowing public routes or custom login pages).
+- ✅ You want to define fine-grained control over route access, roles, or authentication methods.
+
+**⚠️ Without @EnableWebSecurity**
+- Spring Boot still secures your app with default settings (e.g., every endpoint requires authentication, with generated password).
+- But you cannot customize the security rules easily.
 
 
 
