@@ -465,5 +465,83 @@ When `@EnableWebSecurity` is used:
 - Spring Boot still secures your app with default settings (e.g., every endpoint requires authentication, with generated password).
 - But you cannot customize the security rules easily.
 
+---
 
+## 8. What is Logging
+**defination**
+- Process of recording application events (errors, info, warnings).
+- Helps in debugging and monitoring.
+- Spring Boot uses `SLF4J` (facade) and `Logback` (implementation) by default.
+
+**Default Logging Setup**
+Framework: `Logback`
+Output: `Console` (starts before Spring context initializes)
+
+
+| Level | Use                           |
+| ----- | ----------------------------- |
+| TRACE | Very detailed (internal flow) |
+| DEBUG | Debugging info                |
+| INFO  | General application messages  |
+| WARN  | Warnings, not fatal           |
+| ERROR | Errors/failures               |
+| OFF   | Disable logging               |
+
+```
+logger.trace("Trace");
+logger.debug("Debug");
+logger.info("Info");
+logger.warn("Warn");
+logger.error("Error");
+```
+
+**Configure Logging (application.properties)**
+```
+# Global level
+logging.level.root=INFO
+
+# Package-specific level
+logging.level.org.springframework.web=DEBUG
+logging.level.com.example.myapp=TRACE
+
+# File logging
+logging.file.name=app.log
+# OR specify folder
+logging.file.path=logs
+```
+
+**Custom logback-spring.xml (Advanced Config)**
+```
+<configuration>
+    <appender name="myConsoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>
+                %d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <appender name="myFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>
+            journalApp.log
+        </file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>journalApp-%d{yy-MM-dd_HH-mm}.%i.log</fileNamePattern>
+            <maxFileSize>10MB</maxFileSize>
+            <maxHistory>10</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>
+                %d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+            </pattern>
+        </encoder>
+
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="myConsoleAppender"/>
+        <appender-ref ref="myFileAppender"/>
+    </root>
+</configuration>
+```
 
