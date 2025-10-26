@@ -1,4 +1,4 @@
-## 1 🌱 Spring vs Spring Boot
+dff## 1 🌱 Spring vs Spring Boot
 
 ### 🔹 1. What is Spring?
 - **Spring** is a **Java-based framework** for building **enterprise-level applications**.  
@@ -544,4 +544,48 @@ logging.file.path=logs
     </root>
 </configuration>
 ```
+---
+
+## 9. 🧩 RestTemplate
+
+**🔹 Definition**
+- RestTemplate is a **synchronous HTTP client** provided by Spring for calling **RESTful web services**.
+- It is used to **consume APIs** (GET, POST, PUT, DELETE, etc.) from other servers or microservices.
+
+**⚙️ Setup**
+In Spring Boot (Spring Web), RestTemplate comes automatically if you have the dependency:
+```
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-web</artifactId>
+</dependency>
+```
+
+**🧠 How to Define a Bean**
+You should define RestTemplate as a bean so that it can be autowired anywhere in the project.
+```
+@Configuration
+public class AppConfig {
+
+    @Bean
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
+}
+```
+Then inject it:
+```
+@Autowired
+private RestTemplate restTemplate;
+```
+**🚀 Common Methods**
+| Method                                             | Description                                                           |
+| -------------------------------------------------- | --------------------------------------------------------------------- |
+| `getForObject(url, classType)`                     | Sends a GET request and returns the response body as an object.       |
+| `getForEntity(url, classType)`                     | Returns full response (body, headers, status).                        |
+| `postForObject(url, request, classType)`           | Sends POST request and returns response body.                         |
+| `postForEntity(url, request, classType)`           | Sends POST and returns full `ResponseEntity`.                         |
+| `put(url, request)`                                | Sends a PUT request (no response body).                               |
+| `delete(url)`                                      | Sends DELETE request.                                                 |
+| `exchange(url, HttpMethod, HttpEntity, classType)` | More flexible — allows custom headers, request body, and HTTP method. |
 
