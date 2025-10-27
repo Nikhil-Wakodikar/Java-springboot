@@ -589,3 +589,37 @@ private RestTemplate restTemplate;
 | `delete(url)`                                      | Sends DELETE request.                                                 |
 | `exchange(url, HttpMethod, HttpEntity, classType)` | More flexible — allows custom headers, request body, and HTTP method. |
 
+---
+
+## @Component vs @Service
+**🧩 @Component**
+- It is a generic annotation in Spring.
+- Used to mark a class as a Spring-managed bean.
+- Tells Spring to create an object of that class and manage its lifecycle.
+- Can be used for any type of class — helper, utility, or general purpose.
+- Example:
+```
+@Component
+public class EmailHelper {
+    public void sendEmail() { ... }
+}
+```
+
+**⚙️ @Service**
+- It is a special type of @Component.
+- Used to mark a class that contains business logic.
+- Commonly used in the Service layer of an application (between Controller and Repository).
+- Helps other developers understand the class purpose.
+- Also supports AOP features like transaction management.
+- Example:
+```
+@Service
+public class UserService {
+    public void registerUser() { ... }
+}
+```
+
+**🧠 In Simple Words**
+- @Component → Used for any general class.
+- @Service → Used for business logic classes (inside service layer).
+- Both create Spring beans, but @Service is more specific and meaningful.
