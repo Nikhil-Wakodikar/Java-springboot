@@ -1,6 +1,6 @@
-dff## 1 🌱 Spring vs Spring Boot
+## 1 🌱 Spring vs Spring Boot
 
-### 🔹 1. What is Spring?
+**🔹 1. What is Spring?**
 - **Spring** is a **Java-based framework** for building **enterprise-level applications**.  
 - Provides features like:
   - **Inversion of Control (IoC) / Dependency Injection**
@@ -10,7 +10,7 @@ dff## 1 🌱 Spring vs Spring Boot
 - Helps in building modular, maintainable, and testable applications.  
 - Requires **manual configuration** (XML or Java-based) for most things.
 
-### 🔹 2. What is Spring Boot?
+**🔹 2. What is Spring Boot?**
 - **Spring Boot** is a **framework built on top of Spring** to simplify Spring application development.  
 - Focuses on **auto-configuration** and **convention over configuration**.  
 - Key features:
@@ -19,7 +19,7 @@ dff## 1 🌱 Spring vs Spring Boot
   - **Minimal configuration** — reduces boilerplate code.  
   - **Production-ready features** — metrics, health checks, logging.
 
-### 🔹 3. Difference Between Spring and Spring Boot
+**🔹 3. Difference Between Spring and Spring Boot**
 
 | Feature | Spring | Spring Boot |
 |---------|--------|------------|
@@ -30,20 +30,20 @@ dff## 1 🌱 Spring vs Spring Boot
 | **Complexity** | More flexible, but complex for beginners | Less flexible, but simpler and faster for development |
 | **Use Case** | Enterprise applications needing custom setup | Microservices, REST APIs, or quick Spring apps |
 
-### 🔹 4. Summary
+**🔹 4. Summary**
 - **Spring** = Powerful, flexible Java framework (requires manual setup).  
 - **Spring Boot** = Opinionated framework to **simplify Spring development**, reduce configuration, and make projects production-ready quickly.
 
 ---
 
 ## 2. 🌱What is Maven ?
-### 🔹 1. Definition
+**🔹 1. Definition**
 - **Maven** is a **build automation and project management tool** for **Java-based projects**.  
 - It helps in **building, testing, packaging, and deploying** applications.  
 - It also manages **project dependencies** automatically.
   
 
-### 🔹 2. Main Features
+**🔹 2. Main Features**
 1. **Build Automation** – Compiles code, runs tests, and packages applications automatically.  
 2. **Dependency Management** – Automatically downloads and manages required libraries (JARs).  
 3. **Project Management** – Standardizes project structure and configuration.  
@@ -51,17 +51,17 @@ dff## 1 🌱 Spring vs Spring Boot
 5. **Integration** – Works well with IDEs (IntelliJ, Eclipse, VS Code) and CI/CD tools.
 
 
-### 🔹 3. Key File — `pom.xml` (Project Object Model)
+**🔹 3. Key File — `pom.xml` (Project Object Model)**
 - The heart of every Maven project.  
 - Contains all project details and configurations.
 
-### It defines:
+**It defines:**
 1. **Project info** – name, version, description, etc.  
 2. **Dependencies** – external libraries the project needs.  
 3. **Build plugins** – extra tools for building/testing.  
 4. **Project structure** – how code and resources are organized.
 
-### Example:
+**Example:**
 ```xml
 <project>
     <modelVersion>4.0.0</modelVersion>
@@ -78,7 +78,7 @@ dff## 1 🌱 Spring vs Spring Boot
 </project>
 ```
 
-### 🔹 4. Dependency Management
+**🔹 4. Dependency Management**
 - You don’t need to manually download .jar files.
 - Just declare dependencies in pom.xml.
 - Maven automatically downloads them from Maven Central Repository.
@@ -91,7 +91,7 @@ dff## 1 🌱 Spring vs Spring Boot
 </dependency>
 ```
 
-### 🔹 5. Common Maven Commands
+**🔹 5. Common Maven Commands**
 
 | Command               | Description                                           |
 | --------------------- | ----------------------------------------------------- |
@@ -102,7 +102,7 @@ dff## 1 🌱 Spring vs Spring Boot
 | `mvn install`         | Installs the package into the local Maven repository. |
 | `mvn spring-boot:run` | Runs a Spring Boot application.                       |
 
-### 🔹 6. Maven Project Structure
+**🔹 6. Maven Project Structure**
 ```
 my-project/
  ├── src/
@@ -114,7 +114,7 @@ my-project/
  └── pom.xml              → Maven configuration file
 ```
 
-### 🔹 7. Why Use Maven
+**🔹 7. Why Use Maven**
 - ✅ Easy dependency management
 - ✅ Standard project layout
 - ✅ Automated build process
@@ -122,7 +122,7 @@ my-project/
 - ✅ Easy to use in CI/CD pipelines
 - ✅ Reduces manual setup and errors
 
-## 🌱 What is Maven Wrapper (mvnw)
+### 🌱 What is Maven Wrapper (mvnw)
 The Maven Wrapper allows you to run Maven commands **without installing Maven globally**.
 It ensures that everyone uses the **same Maven version** for your project.
 
@@ -151,8 +151,8 @@ my-springboot-project/
 ├── pom.xml
 └── README.md
 ```
-### 📘 Folder and File Explanation
-### 1. src/main/java/
+**📘 Folder and File Explanation**
+**1. src/main/java/**
 - Contains **all Java source code** for your application.
 - Organized by **package structure**, usually starting with your base package (e.g., `com.example.demo`).
 
@@ -165,7 +165,7 @@ my-springboot-project/
 | `model` or `entity` | Classes that represent database tables or data models.                    |
 | `config`            | Configuration files or custom beans (`@Configuration`).                   |
 
-### 2. src/main/resources/
+**2. src/main/resources/**
 Contains **non-code resources** like:
 | File/Folder                                   | Purpose                                                          |
 | --------------------------------------------- | ---------------------------------------------------------------- |
@@ -173,12 +173,12 @@ Contains **non-code resources** like:
 | `static/`                                     | Stores static files like CSS, JS, images (served automatically). |
 | `templates/`                                  | For HTML templates (used with Thymeleaf or Freemarker).          |
 
-### 3. src/test/java/
+**3. src/test/java/**
 - Contains unit tests and integration tests.
 - By default, includes a test file named DemoApplicationTests.java.
 - Uses frameworks like JUnit and Mockito for testing.
 
-### 4. pom.xml
+**4. pom.xml**
 The `pom.xml` is the **Maven configuration file**.
 It defines:
 - **Project dependencies** (like Spring Boot, JPA, etc.)  
@@ -192,7 +192,7 @@ It defines:
 </dependency>
 ```
 
-### 5. DemoApplication.java
+**5. DemoApplication.java**
 The **main entry point** of the Spring Boot app.
 Contains the `@SpringBootApplication` annotation which:
 - Enables component scanning
@@ -207,11 +207,11 @@ public class DemoApplication {
 }
 ```
 
-### 6. target/
+**6. target/**
 - Created after you build the project using Maven (`mvn package`).
 - Contains compiled `.class` files, JAR/WAR files, and other build artifacts.
 
-### 🧩 Typical Flow
+**🧩 Typical Flow**
 - A request hits a `Controller` (@RestController).
 - The Controller calls a `Service` for business logic.
 - The Service interacts with a `Repository` to fetch or save data.
