@@ -142,6 +142,32 @@ One of the most frequently asked topics.
 - Sealed classes
 
 
+# Java
+
+
+
+## What is Java?
+
+Java is a high-level, object-oriented, and platform-independent programming language used to develop web, mobile, and desktop applications, as well as enterprise software.
+
+### Example
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+    }
+}
+```
+
+## Key Features
+
+- **Platform-independent:** Java code can run on different operating systems using the Java Virtual Machine (JVM).
+- **Object-oriented:** Java uses classes and objects to organize code.
+- **Simple:** Java has easy-to-understand syntax and avoids complex features like pointers.
+- **Robust:** Java handles errors and manages memory automatically through garbage collection.
+- **Multithreaded:** Java allows multiple tasks to run simultaneously.
+
 ## 🧩 1. Data Types, Variables, Loops, and Conditionals
 **🔸 Primitive Data Types (8 types)**
 | Type      | Size    | Example                       | Description                  |
