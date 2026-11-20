@@ -168,6 +168,62 @@ public class Main {
 - **Robust:** Java handles errors and manages memory automatically through garbage collection.
 - **Multithreaded:** Java allows multiple tasks to run simultaneously.
 
+
+
+# JDK vs JRE vs JVM
+
+Java has three important components: the **JDK**, **JRE**, and **JVM**.
+
+## JVM (Java Virtual Machine)
+
+- JVM stands for **Java Virtual Machine**.
+- It executes Java bytecode by converting it into machine-specific instructions.
+- It helps Java programs run on different operating systems.
+
+**Example:** A compatible JVM can run Java programs on Windows, Linux, and macOS.
+
+## JRE (Java Runtime Environment)
+
+- The JRE provides the environment needed to run Java applications.
+- It includes the JVM and the libraries required by Java applications.
+- It is for running Java programs, not developing them.
+
+**Example:** If you only want to run a Java application, you need a Java runtime environment.
+
+## JDK (Java Development Kit)
+
+- The JDK is used to develop Java applications.
+- It includes the tools needed to develop and run Java programs.
+- Common tools include `javac` (the Java compiler) and `java` (the application launcher).
+
+**Example:** When writing and compiling Java code, you need the JDK.
+
+## Quick Comparison
+
+| Component | Purpose | Includes |
+|---|---|---|
+| JVM | Runs Java bytecode | Bytecode execution environment |
+| JRE | Runs Java applications | JVM and runtime libraries |
+| JDK | Develops Java applications | Development tools and runtime components |
+
+**In short:** The JVM runs Java bytecode, the JRE provides the runtime environment, and the JDK provides tools for developing Java applications.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## 🧩 1. Data Types, Variables, Loops, and Conditionals
 **🔸 Primitive Data Types (8 types)**
 | Type      | Size    | Example                       | Description                  |
